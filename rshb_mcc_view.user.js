@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RSHB MCC View
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Show MCC in RSHB online bank
 // @author       alezhu
 // @match        https://online.rshb.ru/ib6/wf2/retail/cards/newbankcardpanel
@@ -78,9 +78,16 @@
                             //Text
                             oText = oTd;
                             break;
+                        case 2:
+                            //Amount Pre
+                            amount = Math.abs(Number.parseFloat(oTd.innerText.replace(/\s+/g, '')));
+                            break;
                         case 5:
                             //Amount
-                            amount = Math.abs(Number.parseFloat(oTd.innerText.replace(/\s+/g, '')));
+                            var sAmount = oTd.innerText;
+                            if (sAmount) {
+                                amount = Math.abs(Number.parseFloat(sAmount.replace(/\s+/g, '')));
+                            }
                             break;
                         case 6:
                             //TSP
