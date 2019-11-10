@@ -6,6 +6,10 @@
 // @author       alezhu
 // @match        https://online.rshb.ru/ib6/wf2/retail/cards/newbankcardpanel
 // @grant        none
+// @source      https://github.com/alezhu/rshb_online_mcc/raw/master/rshb_mcc_view.user.js
+// @updateURL   https://github.com/alezhu/rshb_online_mcc/raw/master/rshb_mcc_view.user.js
+// @downloadURL https://github.com/alezhu/rshb_online_mcc/raw/master/rshb_mcc_view.user.js
+
 // ==/UserScript==
 
 (function(Tapestry) {
