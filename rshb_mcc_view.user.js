@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RSHB MCC View
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Show MCC in RSHB online bank
 // @author       alezhu
 // @match        https://online.rshb.ru/ib6/wf2/retail/cards/newbankcardpanel
@@ -37,7 +37,7 @@
                                         operationMap.set(operation.date, oMapDate);
                                     }
 
-                                    var oMapTSP = oMapDate.get(operation.desc);
+                                    var oMapTSP = oMapDate.get(operation.desc.replace(/\s+/g, " "));
                                     if (!oMapTSP) {
                                         oMapTSP = new Map();
                                         oMapDate.set(operation.desc, oMapTSP);
